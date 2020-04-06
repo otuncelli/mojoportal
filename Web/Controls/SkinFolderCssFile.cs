@@ -77,7 +77,7 @@ namespace mojoPortal.Web.UI
             set { visibleUrls = value; }
         }
 
-        private string linkFormat = "\n<link rel='stylesheet' type='text/css' href='{0}'>";
+        private string linkFormat = "\n<link rel=\"stylesheet\" type=\"text/css\" href=\"{0}\" />";
 
         public string LinkFormat
         {
