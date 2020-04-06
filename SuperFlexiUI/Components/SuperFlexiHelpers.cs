@@ -547,7 +547,7 @@ namespace SuperFlexiUI
 					//	styleUrl = WebUtils.ResolveServerUrl(Path.Combine(fileInfo.DirectoryName.Replace(System.Web.Hosting.HostingEnvironment.MapPath("~"), "~/"), style.Url));
 					//}
 
-					sbStyleText.Append(string.Format(styleLinkFormat, styleUrl, styleName, style.Media));
+					sbStyleText.Append(string.Format(styleLinkFormat, HttpUtility.HtmlEncode(Uri.EscapeUriString(styleUrl)), styleName, style.Media));
 				}
                 else if (!String.IsNullOrWhiteSpace(style.CSS))
                 {
