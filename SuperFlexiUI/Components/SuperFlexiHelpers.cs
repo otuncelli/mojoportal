@@ -508,7 +508,7 @@ namespace SuperFlexiUI
             Page page,
             Control control)
         {
-            string styleLinkFormat = "\n<link rel=\"stylesheet\" href=\"{0}\" media=\"{2}\" data-name=\"{1}\">";
+            string styleLinkFormat = "\n<link rel=\"stylesheet\" href=\"{0}\" media=\"{2}\" data-name=\"{1}\" />";
             string rawCSSFormat = "\n<style type=\"text/css\" data-name=\"{1}\" media=\"{2}\">\n{0}\n</style>";
 
             foreach (MarkupCss style in markupCss)
