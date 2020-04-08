@@ -309,117 +309,117 @@ namespace mojoPortal.Web.Controls
         private string _BACK_TO_PAGE = "Back to Page";
         private string _NEXT_TO_PAGE = "Next to Page";
         private string _NAVIGATE_TO_PAGE = "Navigate to Page";
-        private string _LAST = "&gt;&gt;";
-        private string _FIRST = "&lt;&lt;";
-        private string _previous = "&lt;";
-        private string _next = "&gt;";
+        private string _LAST = "<span class=\"fa fa-angle-double-right\"></span>";
+        private string _FIRST = "<span class=\"fa fa-angle-double-left\"></span>";
+        private string _previous = "<span class=\"fa fa-angle-left\" ></span>";
+        private string _next = "<span class=\"fa fa-angle-right\"></span>";
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string NavigateToPageText
         {
             get { return _NAVIGATE_TO_PAGE; }
             set { _NAVIGATE_TO_PAGE = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string GoClause
         {
             get { return _GO; }
             set { _GO = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string OfClause
         {
             get { return _OF; }
             set { _OF = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string FromClause
         {
             get { return _FROM; }
             set { _FROM = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string PageClause
         {
             get { return _PAGE; }
             set { _PAGE = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string ToClause
         {
             get { return _TO; }
             set { _TO = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string ShowingResultClause
         {
             get { return _SHOWING_RESULT; }
             set { _SHOWING_RESULT = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string ShowResultClause
         {
             get { return _SHOW_RESULT; }
             set { _SHOW_RESULT = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string BackToFirstClause
         {
             get { return _BACK_TO_FIRST; }
             set { _BACK_TO_FIRST = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string GoToLastClause
         {
             get { return _GO_TO_LAST; }
             set { _GO_TO_LAST = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string BackToPageClause
         {
             get { return _BACK_TO_PAGE; }
             set { _BACK_TO_PAGE = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string NextToPageClause
         {
             get { return _NEXT_TO_PAGE; }
             set { _NEXT_TO_PAGE = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string LastClause
         {
             get { return _LAST; }
             set { _LAST = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string FirstClause
         {
             get { return _FIRST; }
             set { _FIRST = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string PreviousClause
         {
             get { return _previous; }
             set { _previous = value; }
         }
 
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public string NextClause
         {
             get { return _next; }
@@ -427,7 +427,7 @@ namespace mojoPortal.Web.Controls
         }
 
         private bool _rightToLeft = false;
-        [Category("GlobalizaionSettings")]
+        [Category("GlobalizationSettings")]
         public bool RTL
         {
             get { return _rightToLeft; }

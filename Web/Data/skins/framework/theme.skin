@@ -828,10 +828,10 @@ http://foundation.zurb.com/docs/ui.php
 	CurrentPageCssClass=""
 	OtherPageCellCssClass=""
 	OtherPageCssClass=""
-	FirstClause="&#xf100;"
-	PreviousClause="&#xf104;"
-	NextClause="&#xf105;"
-	LastClause="&#xf101;"
+	FirstClause="&#x3C;span class=&#x22;fa fa-angle-double-left&#x22;&#x3E;&#x3C;/span&#x3E;"
+	PreviousClause="&#x3C;span class=&#x22;fa fa-angle-left&#x22;&#x3E;&#x3C;/span&#x3E;"
+	NextClause="&#x3C;span class=&#x22;fa fa-angle-right&#x22;&#x3E;&#x3C;/span&#x3E;"
+	LastClause="&#x3C;span class=&#x22;fa fa-angle-double-right&#x22;&#x3E;&#x3C;/span&#x3E;"
 />
 
 <portal:mojoCutePager runat="server" SkinID="Blog"
@@ -846,10 +846,10 @@ http://foundation.zurb.com/docs/ui.php
 	CurrentPageCssClass=""
 	OtherPageCellCssClass=""
 	OtherPageCssClass=""
-	FirstClause="&#xf100;"
-	PreviousClause="&#xf104;"
-	NextClause="&#xf105;"
-	LastClause="&#xf101;"
+	FirstClause="&#x3C;span class=&#x22;fa fa-angle-double-left&#x22;&#x3E;&#x3C;/span&#x3E;"
+	PreviousClause="&#x3C;span class=&#x22;fa fa-angle-left&#x22;&#x3E;&#x3C;/span&#x3E;"
+	NextClause="&#x3C;span class=&#x22;fa fa-angle-right&#x22;&#x3E;&#x3C;/span&#x3E;"
+	LastClause="&#x3C;span class=&#x22;fa fa-angle-double-right&#x22;&#x3E;&#x3C;/span&#x3E;"
 />
 
 <portal:MemberListDisplaySettings  runat="server"
