@@ -311,7 +311,7 @@ namespace mojoPortal.Web.Controls
         private string _NAVIGATE_TO_PAGE = "Navigate to Page";
         private string _LAST = "<span class=\"fa fa-angle-double-right\"></span>";
         private string _FIRST = "<span class=\"fa fa-angle-double-left\"></span>";
-        private string _previous = "<span class=\"fa fa-angle-left\" ></span>";
+        private string _previous = "<span class=\"fa fa-angle-left\"></span>";
         private string _next = "<span class=\"fa fa-angle-right\"></span>";
 
         [Category("GlobalizationSettings")]
