@@ -35,7 +35,7 @@ CREATE TABLE `<%= SourceTable.Name %>` (
 <% for (int i = 0; i < SourceTable.PrimaryKey.MemberColumns.Count; i++) {  %>
  PRIMARY KEY (`<%= SourceTable.PrimaryKey.MemberColumns[i].Name %>`)   
      <% } %>
-) ENGINE=<%= StorageEngine%> DEFAULT CHARSET=utf8;
+) ENGINE=<%= StorageEngine%> DEFAULT CHARSET=utf8mb4;
 	
 <% } else { %>
 
