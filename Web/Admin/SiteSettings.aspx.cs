@@ -2261,7 +2261,7 @@ namespace mojoPortal.Web.AdminUI
 			
 
 			imgLogo.Src = ImageSiteRoot
-				+ "/Data/SitesImages/1x1.gif";
+				+ "/Data/SiteImages/1x1.gif";
 
 			allowPasswordFormatChange
 				= ((IsServerAdmin && WebConfigSettings.AllowPasswordFormatChange) || ((IsServerAdmin) && (selectedSiteID == -1)));
