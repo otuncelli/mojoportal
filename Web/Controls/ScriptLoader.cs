@@ -1076,7 +1076,7 @@ namespace mojoPortal.Web.UI
                     mojoBasePage basePage = Page as mojoBasePage;
                     if (basePage.StyleCombiner.EnableNonClickablePageLinks)
                     {
-                        initAutoScript.Append("$(\"a.unclickable\").click(function(){ return false; });");
+                        initAutoScript.Append("$(\"a.unclickable\").click(function(event){ event.preventDefault(); });");
                     }
                 }
 
