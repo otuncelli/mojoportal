@@ -6,11 +6,13 @@
 			<div class="settingrow idrow">
 				<mp:SiteLabel ID="lblEmail" runat="server" ForControl="UserName" ConfigKey="SignInEmailLabel" SkinID="settinglabel" />
 				<mp:SiteLabel ID="lblUserID" runat="server" ForControl="UserName" ConfigKey="ManageUsersLoginNameLabel" SkinID="settinglabel" />
+				<br>
 				<asp:TextBox ID="UserName" runat="server" CssClass="normaltextbox signinbox" MaxLength="100" />
 			</div>
 
 			<div class="settingrow passwordrow">
 				<mp:SiteLabel ID="lblPassword" runat="server" ForControl="Password" ConfigKey="SignInPasswordLabel" SkinID="settinglabel" />
+				<br>
 				<asp:TextBox ID="Password" runat="server" CssClass="normaltextbox passwordbox" TextMode="password" />
 			</div>
 
