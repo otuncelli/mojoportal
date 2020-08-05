@@ -99,8 +99,8 @@
 				</div>
 				<div class="personnel-list__details">
 					<h4>$name$ $_EditLink_$</h4>
-					<p class="personnel-list__position">$position$</p>
-					<p class="personnel-list__description">$description$</p>
+					<div class="personnel-list__position">$position$</div>
+					<div class="personnel-list__description">$description$</div>
 				</div>
 			</div>
 		]]></ItemMarkup>
