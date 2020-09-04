@@ -94,8 +94,8 @@
 		<!-- Everything in ItemMarkup will be rendered once for each item that the user creates -->
 		<ItemMarkup><![CDATA[
 			<div class="content-slider__item" style="background-image: url($image$);">
-				$_EditLink_$
 				<div class="content-slider__content">$content$</div>
+				$_EditLink_$
 			</div> 
 		]]></ItemMarkup>
 
