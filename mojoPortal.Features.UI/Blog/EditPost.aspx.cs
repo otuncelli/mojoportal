@@ -650,7 +650,7 @@ namespace mojoPortal.Web.BlogUI
 			blog.HeadlineImageUrl = txtHeadlineImage.Text;
 
 
-			if (blog.HeadlineImageUrl != currentFeaturedImagePath)
+			if (blog.HeadlineImageUrl != currentFeaturedImagePath || String.IsNullOrWhiteSpace(blog.HeadlineImageUrl))
 			{
 				//update meta 
 				List<ContentMeta> metas = metaRepository.FetchByContent(blog.BlogGuid);
@@ -675,8 +675,15 @@ namespace mojoPortal.Web.BlogUI
 
 				foreach (ContentMeta meta in filteredMetas)
 				{
-					meta.MetaContent = SiteRoot + Page.ResolveUrl(blog.HeadlineImageUrl);
-					metaRepository.Save(meta);
+					if (!String.IsNullOrWhiteSpace(blog.HeadlineImageUrl))
+					{
+						meta.MetaContent = SiteRoot + Page.ResolveUrl(blog.HeadlineImageUrl);
+						metaRepository.Save(meta);
+					}
+					else
+					{ //remove image meta with empty MetaContent
+						metaRepository.Delete(meta.Guid);
+					}
 				}
 			}
 
@@ -852,7 +859,7 @@ namespace mojoPortal.Web.BlogUI
 				foreach (ContentMeta tag in metaTags)
 				{
 					int truncateLength = 155;
-
+					bool useMeta = true;
 					switch (tag.MetaContent)
 					{
 						case "{{site-name}}":
@@ -898,6 +905,7 @@ namespace mojoPortal.Web.BlogUI
 							}
 							else
 							{
+								useMeta = false;
 								tag.MetaContent = string.Empty;
 							}
 							break;
@@ -920,16 +928,19 @@ namespace mojoPortal.Web.BlogUI
 							//	break;
 					}
 
-					createMetaEntry(
-						new Guid(),
-						tag.NameProperty,
-						tag.Name,
-						tag.ContentProperty,
-						tag.MetaContent,
-						tag.Scheme,
-						tag.LangCode,
-						tag.Dir
-					);
+					if (useMeta) //don't want to add meta with empty MetaContent
+					{
+						createMetaEntry(
+							new Guid(),
+							tag.NameProperty,
+							tag.Name,
+							tag.ContentProperty,
+							tag.MetaContent,
+							tag.Scheme,
+							tag.LangCode,
+							tag.Dir
+						);
+					}
 				}
 			}
 		}
@@ -1148,8 +1159,8 @@ namespace mojoPortal.Web.BlogUI
 
 			TextBox txtName = (TextBox)grid.Rows[e.RowIndex].Cells[1].FindControl("txtName");
 			TextBox txtNameProperty = (TextBox)grid.Rows[e.RowIndex].Cells[1].FindControl("txtNameProperty");
-			TextBox txtMetaContent = (TextBox)grid.Rows[e.RowIndex].Cells[1].FindControl("txtMetaContent");
 			TextBox txtMetaContentProperty = (TextBox)grid.Rows[e.RowIndex].Cells[1].FindControl("txtMetaContentProperty");
+			TextBox txtMetaContent = (TextBox)grid.Rows[e.RowIndex].Cells[1].FindControl("txtMetaContent");
 			TextBox txtScheme = (TextBox)grid.Rows[e.RowIndex].Cells[1].FindControl("txtScheme");
 			TextBox txtLangCode = (TextBox)grid.Rows[e.RowIndex].Cells[1].FindControl("txtLangCode");
 			DropDownList ddDirection = (DropDownList)grid.Rows[e.RowIndex].Cells[1].FindControl("ddDirection");
@@ -1280,7 +1291,7 @@ namespace mojoPortal.Web.BlogUI
 			grdContentMeta.EditIndex = 0;
 			grdContentMeta.DataSource = dataTable.DefaultView;
 			grdContentMeta.DataBind();
-			grdContentMeta.Columns[2].Visible = false;
+			//grdContentMeta.Columns[2].Visible = false;
 			btnAddMeta.Visible = false;
 
 			upMeta.Update();
